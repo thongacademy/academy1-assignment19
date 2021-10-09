@@ -1,0 +1,73 @@
+{
+    "LoadBalancers": [
+        {
+            "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:192775202819:loadbalancer/app/assignment19LB/7cc6107d0eb75f87",
+            "DNSName": "assignment19LB-1681378795.us-east-1.elb.amazonaws.com",
+            "CanonicalHostedZoneId": "Z35SXDOTRQ7X7K",
+            "CreatedTime": "2021-10-09T11:17:48.410000+00:00",
+            "LoadBalancerName": "assignment19LB",
+            "Scheme": "internet-facing",
+            "VpcId": "vpc-033134a5d27f0fa55",
+            "State": {
+                "Code": "active"
+            },
+            "Type": "application",
+            "AvailabilityZones": [
+                {
+                    "ZoneName": "us-east-1f",
+                    "SubnetId": "subnet-066093893945cc216",
+                    "LoadBalancerAddresses": []
+                },
+                {
+                    "ZoneName": "us-east-1a",
+                    "SubnetId": "subnet-08e08efcbe72148d3",
+                    "LoadBalancerAddresses": []
+                }
+            ],
+            "SecurityGroups": [
+                "sg-0e87846066077690d",
+                "sg-0fe48dbf9ab6ad89e"
+            ],
+            "IpAddressType": "ipv4"
+        }
+    ]
+}
+{
+    "TargetGroups": [
+        {
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:192775202819:targetgroup/assignment19-target-group/91d77e88bc033f77",
+            "TargetGroupName": "assignment19-target-group",
+            "Protocol": "HTTP",
+            "Port": 80,
+            "VpcId": "vpc-033134a5d27f0fa55",
+            "HealthCheckProtocol": "HTTP",
+            "HealthCheckPort": "traffic-port",
+            "HealthCheckEnabled": true,
+            "HealthCheckIntervalSeconds": 30,
+            "HealthCheckTimeoutSeconds": 5,
+            "HealthyThresholdCount": 5,
+            "UnhealthyThresholdCount": 2,
+            "HealthCheckPath": "/index.php",
+            "Matcher": {
+                "HttpCode": "200"
+            },
+            "LoadBalancerArns": [
+                "arn:aws:elasticloadbalancing:us-east-1:192775202819:loadbalancer/app/assignment19LB/7cc6107d0eb75f87"
+            ],
+            "TargetType": "instance",
+            "ProtocolVersion": "HTTP1"
+        }
+    ]
+}
+>>>Check healthy instances<<<
+Hi, I'm instance i-0699ddfd52aad3689
+Hi, I'm instance i-0699ddfd52aad3689
+Hi, I'm instance i-03854173449c1b367
+Hi, I'm instance i-03854173449c1b367
+Hi, I'm instance i-0699ddfd52aad3689
+>>>Check healthy instances<<<
+Hi, I'm instance i-04f949b9b8759f446
+Hi, I'm instance i-02889bc459659ef29
+Hi, I'm instance i-04f949b9b8759f446
+Hi, I'm instance i-02889bc459659ef29
+Hi, I'm instance i-04f949b9b8759f446
